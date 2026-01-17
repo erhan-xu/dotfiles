@@ -1,0 +1,7 @@
+[[plugin.deps]]
+use = "boydaihungst/simple-mtpfs"
+rev = "614a2d2"
+hash = "daf919bc09c0ce5f052e9709aaf5ceba"
+
+[flavor]
+deps = []

@@ -1,0 +1,9 @@
+[user]
+	email = {{ .email }}
+	name = erhan-xu
+[credential]
+{{- if .isWindows }}
+	helper = manager
+{{- else }}
+	helper = cache
+{{- end }}

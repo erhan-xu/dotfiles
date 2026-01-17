@@ -1,0 +1,13 @@
+# Ignore Hyprland-related configs on non-Arch systems
+{{ if not .isArch }}
+.config/hypr/**
+.config/waybar/**
+.config/dunst/**
+.config/tofi/**
+{{ end }}
+
+# Ignore fish_variables (machine-specific)
+.config/fish/fish_variables
+
+# Ignore nvim plugin lock files (regenerated)
+.config/nvim/lazy-lock.json

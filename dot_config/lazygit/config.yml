@@ -1,0 +1,25 @@
+# ~/.config/lazygit/config.yml
+
+gui:
+  # Good theme for legibility
+  theme:
+    lightTheme: false # set to true if you use a light theme
+    activeBorderColor:
+      - '#89b4fa' # A nice blue for active panels
+      - 'bold'
+    inactiveBorderColor:
+      - '#a6adc8'
+    selectedLineBgColor:
+      - '#313244' # Darker background for selected line
+  showRandomTip: true # Disables the tip on startup
+  # showCommandLog: false # Hides the command log at the bottom for a cleaner view
+git:
+  pagers:
+    - # Use delta for better diff views
+      # Install with your package manager: e.g., `brew install git-delta` (macOS), `sudo apt install git-delta` (Debian/Ubuntu)
+      colorArg: always
+      pager: delta --dark --paging=never # Use --light for light themes
+keybinding:
+  # Example: Change quitting to 'q' instead of 'x' in all panels
+  universal:
+    quit: 'q'

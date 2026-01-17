@@ -1,0 +1,15 @@
+{{- $email := "eehan.schu@gmail.com" -}}
+{{- $isWork := false -}}
+
+{{- if eq .chezmoi.hostname "work-desktop" -}}
+{{-   $isWork = true -}}
+{{-   $email = "erhan@company.com" -}}
+{{- end -}}
+
+data:
+  email: {{ $email | quote }}
+  isWork: {{ $isWork }}
+  isArch: {{ and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "arch") }}
+  isUbuntu: {{ and (eq .chezmoi.os "linux") (or (eq .chezmoi.osRelease.id "ubuntu") (contains "ubuntu" (index .chezmoi.osRelease "idLike" | default ""))) }}
+  isWindows: {{ eq .chezmoi.os "windows" }}
+  isLinux: {{ eq .chezmoi.os "linux" }}
