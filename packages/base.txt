@@ -1,0 +1,12 @@
+# Base system packages - essential for any Arch install
+base
+base-devel
+linux
+linux-firmware
+linux-headers
+linux-zen
+linux-zen-headers
+amd-ucode
+efibootmgr
+grub
+man-db

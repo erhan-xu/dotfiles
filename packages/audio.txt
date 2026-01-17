@@ -1,0 +1,6 @@
+# Audio (PipeWire)
+pipewire
+pipewire-pulse
+wireplumber
+pamixer
+pavucontrol

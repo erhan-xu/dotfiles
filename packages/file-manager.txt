@@ -1,0 +1,6 @@
+# File managers and related
+nemo
+gvfs
+gvfs-mtp
+udiskie
+ark

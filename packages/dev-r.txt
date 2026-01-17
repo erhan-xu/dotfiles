@@ -1,0 +1,4 @@
+# R development
+r
+gcc-fortran
+rstudio-desktop-bin

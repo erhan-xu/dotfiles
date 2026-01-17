@@ -1,0 +1,16 @@
+# Fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
+ttf-cascadia-code-nerd
+ttf-cascadia-mono-nerd
+ttf-fira-code
+ttf-fira-mono
+ttf-fira-sans
+ttf-firacode-nerd
+ttf-iosevka-nerd
+ttf-iosevkaterm-nerd
+ttf-jetbrains-mono
+ttf-jetbrains-mono-nerd
+ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-mono

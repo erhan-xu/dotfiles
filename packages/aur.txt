@@ -1,0 +1,33 @@
+# AUR packages (install with yay/paru)
+# Desktop/Hyprland
+grimblast-git
+wlogout
+wshowkeys-git
+
+# Apps
+google-chrome-canary
+vscodium-bin
+trilium-bin
+zotero-beta-bin
+fooyin
+zoom
+clash-verge-rev-bin
+
+# CLI tools
+bluetuith
+browsh-bin
+
+# Utilities
+czkawka-gui-bin
+coreimage
+dupeguru
+debtap
+
+# Drivers
+xp-pen-tablet
+
+# Python
+python-autograd
+
+# System
+polkit-qt6-git

@@ -1,0 +1,3 @@
+# Media players
+vlc
+mpv

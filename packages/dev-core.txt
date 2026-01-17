@@ -1,0 +1,7 @@
+# Core development tools
+git
+github-cli
+rust
+rust-analyzer
+zig
+hugo

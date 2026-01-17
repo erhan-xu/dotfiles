@@ -1,0 +1,5 @@
+# Bluetooth
+bluez
+bluez-utils
+bluez-hid2hci
+blueman

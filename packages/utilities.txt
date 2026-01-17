@@ -1,0 +1,20 @@
+# System utilities
+7zip
+archlinuxcn-keyring
+papirus-icon-theme
+yay
+yay-debug
+unrar
+convmv
+imagemagick
+img2pdf
+pngquant
+usbutils
+exfat-utils
+ntfs-3g
+feh
+libnotify
+timeshift
+electron
+mono
+flatpak

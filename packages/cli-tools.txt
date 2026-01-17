@@ -1,0 +1,24 @@
+# CLI tools and utilities
+btop
+htop
+fzf
+fd
+ripgrep
+lazygit
+yazi
+zoxide
+tmux
+thefuck
+tldr
+tree
+fastfetch
+aria2
+rsync
+task
+taskwarrior-tui
+keychain
+bc
+sdcv
+translate-shell
+ueberzugpp
+chezmoi

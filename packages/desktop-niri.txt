@@ -1,0 +1,3 @@
+# Niri compositor (alternative to Hyprland)
+niri
+fuzzel

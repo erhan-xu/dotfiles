@@ -1,0 +1,10 @@
+# Office and documents
+calibre
+foliate
+zathura
+zathura-pdf-mupdf
+mupdf
+xournalpp
+marker
+zettlr
+onlyoffice-bin

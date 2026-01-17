@@ -1,0 +1,16 @@
+# Python development
+pyenv
+python-dbus
+python-hatchling
+python-ipywidgets
+python-matplotlib
+python-numpy
+python-pandas
+python-pytorch
+python-scikit-learn
+python-scipy
+python-seaborn
+python-selenium
+python-sphinx
+python-statsmodels
+jupyter-notebook

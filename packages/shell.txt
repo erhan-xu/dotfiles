@@ -1,0 +1,5 @@
+# Shells and shell utilities
+zsh
+zsh-completions
+fish
+bash-completion

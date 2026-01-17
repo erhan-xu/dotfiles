@@ -1,0 +1,6 @@
+# Virtualization (QEMU/KVM)
+qemu-full
+virt-manager
+libvirt
+bridge-utils
+dnsmasq

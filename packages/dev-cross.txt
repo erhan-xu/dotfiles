@@ -1,0 +1,3 @@
+# Cross-compilation tools
+aarch64-linux-gnu-gcc
+android-tools

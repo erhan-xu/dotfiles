@@ -1,0 +1,4 @@
+# Text editors
+neovim
+vim
+vi

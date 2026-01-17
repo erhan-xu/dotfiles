@@ -1,0 +1,9 @@
+# Networking
+networkmanager
+iwd
+dhcpcd
+iptables-nft
+bind
+openbsd-netcat
+traceroute
+reflector
