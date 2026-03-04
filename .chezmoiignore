@@ -1,7 +1,7 @@
 # Ignore Hyprland-related configs on non-Arch systems
 {{ if not .isArch }}
-.config/hypr/**
-.config/waybar/**
+# .config/hypr/**
+# .config/waybar/**
 .config/dunst/**
 .config/tofi/**
 {{ end }}
