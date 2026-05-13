@@ -1,43 +1,44 @@
 #!/bin/bash
 
-# 1. 获取选中文本并去除首尾空格
-text=$(wl-paste --primary | xargs)
+# Smart Translator: select text, press SUPER+D to translate
 
-# 如果剪贴板为空，直接退出
+# 1. Get selected text: try primary selection first, then clipboard
+text=$(wl-paste --primary --no-newline 2>/dev/null)
+
 if [ -z "$text" ]; then
+  text=$(wl-paste --no-newline 2>/dev/null)
+fi
+
+# If still empty, exit
+if [ -z "$text" ] || [[ "$text" =~ ^[[:space:]]*$ ]]; then
+  notify-send -u normal -a "Translator" "No text selected"
   exit 1
 fi
 
-# 2. 预设变量
-translation=""
+# Trim whitespace
+text=$(echo "$text" | xargs)
 
-# 3. 逻辑判断
+# 2. Translation logic
+translation=""
 char_count=$(echo -n "$text" | wc -m)
 
 if [ "$char_count" -le 20 ]; then
-  # === 离线查询模式 ===
-  sdcv_result=$(sdcv -n "$text")
+  # Short text: try offline dictionary first
+  sdcv_result=$(sdcv -n "$text" 2>/dev/null)
 
   if [[ "$sdcv_result" == *"Nothing similar to"* ]] || [[ -z "$sdcv_result" ]]; then
-    # 查词失败 -> 转在线 (加 -no-ansi 防止颜色乱码)
-    translation=$(trans -e bing -b -no-ansi :zh "$text")
+    translation=$(trans -e bing -b -no-ansi :zh "$text" 2>/dev/null)
   else
-    # 查词成功 -> 清洗数据
-    # sed '1d': 删除第一行 "Found 1 items..."
-    # sed 's/^-->//': 删除行首的 "-->" 箭头 (这是报错的元凶)
     translation=$(echo "$sdcv_result" | sed '1d' | sed 's/^-->//' | head -n 20)
   fi
 else
-  # === 在线长句模式 ===
-  translation=$(trans -e bing -b -no-ansi :zh "$text")
+  # Long text: online translation
+  translation=$(trans -e bing -b -no-ansi :zh "$text" 2>/dev/null)
 fi
 
-# 防止空结果
 if [ -z "$translation" ]; then
-  translation="..."
+  translation="Translation failed"
 fi
 
-# 4. 发送通知 (核心修复)
-# 注意中间那个孤立的双横线 --
-# 它的作用是告诉 notify-send："停止解析选项，后面全是文本"
-notify-send -u normal -a "Smart Translator" -- "原文: $text" "$translation"
+# 3. Show result
+notify-send -u normal -a "Translator" -- "$text" "$translation"
