@@ -4,6 +4,8 @@
 [credential]
 {{- if .isWindows }}
 	helper = manager
+{{- else if .isMacOS }}
+	helper = osxkeychain
 {{- else }}
 	helper = cache
 {{- end }}

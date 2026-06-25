@@ -1,9 +1,14 @@
 # Ignore Hyprland-related configs on non-Arch systems
 {{ if not .isArch }}
-# .config/hypr/**
-# .config/waybar/**
+.config/hypr/**
+.config/waybar/**
 .config/dunst/**
 .config/tofi/**
+{{ end }}
+
+# Ignore AeroSpace-related configs on non-macOS systems
+{{ if not .isMacOS }}
+.config/aerospace/**
 {{ end }}
 
 # Ignore fish_variables (machine-specific)

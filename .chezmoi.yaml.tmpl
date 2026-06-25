@@ -13,3 +13,6 @@ data:
   isUbuntu: {{ and (eq .chezmoi.os "linux") (or (eq .chezmoi.osRelease.id "ubuntu") (contains "ubuntu" (index .chezmoi.osRelease "idLike" | default ""))) }}
   isWindows: {{ eq .chezmoi.os "windows" }}
   isLinux: {{ eq .chezmoi.os "linux" }}
+  isDarwin: {{ eq .chezmoi.os "darwin" }}
+  isMacOS: {{ eq .chezmoi.os "darwin" }}
+  isMac: {{ eq .chezmoi.os "darwin" }}
